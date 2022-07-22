@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Staatliches&display=swap" rel="stylesheet">
+    <title>JokiTugas.co</title>
+    <link rel="shortcut icon" href="{% static icon %}" type="image/x-icon">
+    <style>header h3 {
+        font-family: 'Staatliches', cursive;
+        text-align: center;
+    
+    }
+
+    header { background-color: darkorange;
+    margin: 0;
+}
+.logo {
+    background-color:darkorange;
+    margin: auto;
+    max-width: 100%;
+    text-align: center;
+    padding: 0px 10px ;
+    overflow: auto;
+    padding-top: 0px;
+}
+.logo img {
+    background-color: darkorange;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+    nav a {
+        text-align: center;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+    
+    }
+    nav a:hover {
+        background-color: darkorange;
+
+    }
+    #logo {
+    width: 10%;
+    text-align: justify;
+    }
+    #banner {
+    width: 100%;
+}     body {
+    background-color: #ffb700;
+    text-align: left;
+    
+    background-size: cover;
+}
+    header p{
+        font-weight: bold;
+        font-family: 'Dosis', sans-serif;
+
+    }
+    ul {
+    background-color: darkorange;
+    list-style: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0%;
+}
+
+li {
+    padding: 5px;
+    float: left;
+}
+
+.card {
+    box-shadow:0 4px 8px 0 orange;
+    margin: auto;
+    max-width: 300px;
+    font-family: 'Dosis', sans-serif;
+    text-align: left;
+    list-style: none;
+    padding: 10px 10px;
+    overflow: hidden;
+    float: left;
+}
+
+.card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+footer {
+    background-image: url(static/img/head.jpg) ;
+    color: white;
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    padding: 2px;
+    margin: 0;
+    padding: 10px 15px;
+    overflow: hidden;
+    }
+</style>
+</head>
+<body background="{% static bg %}">
+    
+    <header>
+        <!-- <img src="{% static banner %}" alt="banner" id="banner"> -->
+        
+        
+            <a href="{{home}}" >
+            <div class="logo">
+            <img id="logo" src="{% static logo %}" alt="">
+            </a>
+        
+        
+        </div>
+        <h1>{{page}} </h1>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  background-color: #ffb700;
+  font-family: cursive;
+}
+
+.glow {
+  font-size: 50px;
+  color: black;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px #e60073, 0 0 50px yellow, 0 0 60px yellow, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px white, 0 0 30px darkorange, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px darkred, 0 0 70px darkred, 0 0 80px #ff4da6;
+  }
+}
+</style>
+        <h2 class="glow">Welcome to JokiTugas</h2>
+        <!-- <p>Tugas anda numpuk?</p>
+        <p>Lelah ngerjain tugas?</p>
+        <p>Coding? Statisika? Jaringan? Pembangunan Proyek? Atau tumbal proyek? Joki Tugas Solusinyaa!</p> -->
+            <nav>
+                <ul>
+                    <!-- <li><a href="{{ nav1 }}">Home</a></li>
+                    <li><a href="{{ nav2 }}">Choose Your Joki!</a></li> -->
+                    {% for link, name in nav3 %}
+                        <li>
+                            <a href="{{ link }}">{{name}}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>    
+    </header>
+    <!-- <p>
+        Pertama Klik Choose Your Joki
+    </p>
+    <p>Lalu pilih Tukang Joki yang anda inginkan</p>
+    <p>Hubungi Nomor HP yang tertera</p>
+    <p>Langsung Check Out!</p>
+    <p>Tugas anda akan selesai!</p> -->
+    <img id="image" src="{% static image %}" alt="" width="100%" >
+</body>
+<footer>
+    <!-- <img src="{% static bgfooter %}" alt=""> -->
+    <p>Project UAS Bahasa Pemrograman Kelompok </p>
+    <p>@copyright 2022</p>
+    
+</footer>
+</html>

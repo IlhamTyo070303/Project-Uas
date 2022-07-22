@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/styles-jadi.css" %}">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Staatliches&display=swap" rel="stylesheet">
+    <title>Maham Shop</title>
+    <style>header h3 {
+        font-family: 'Staatliches', cursive;
+    
+    }
+
+    header { background-color: darkorange;
+    margin: 0;
+}
+
+    nav ul {
+        background-color: darkorange;
+        list-style: none;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+
+        float: left;
+    }
+
+    nav a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+    
+    }
+    nav a:hover {
+        background-color: darkorange;
+
+
+    }
+    #banner {
+    width: 100%;
+}    
+
+
+#logo {
+    width: 10%;
+    text-align: justify;
+}
+    body {
+    background-color: #ffb700;
+
+    background-size: cover;
+}
+    header p{
+        font-weight: bold;
+        font-family: 'Dosis', sans-serif;
+
+    }
+
+    
+    ul {
+    background-color: #ffb700;
+    list-style: none;
+    margin: 0;
+    padding: 0%;
+}
+
+li {
+    padding: 5px;
+}
+
+
+footer {
+    background-image: url(static/img/head.jpg) ;
+    color: #ffb700;
+    text-align: center;
+    padding: 2px;
+    margin: 0;
+    padding: 10px 15px;
+    overflow: hidden;
+    }
+
+    /* Button css */
+    .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+    font-family: 'Dosis', sans-serif;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: white;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+</style>
+</head>
+<body background="{% static bg %}">
+    
+    <header>
+        <a href="{{home}}">
+            <div class="logo">
+            <img id="logo" src="{% static logo %}" alt="">
+            </a>
+        <h1>{{page}} </h1>
+        <h2>Check out</h2>
+        <!-- <h3>Jasa Joki Tugas </h3>
+        <p>Siapa yang anda butuhkan kok bisa sampai masuk kesini?</p> -->
+            <nav>
+                <ul>
+                    <!-- <li><a href="{{ nav1 }}">Home</a></li>
+                    <li><a href="{{ nav2 }}">Choose Your Joki!</a></li> -->
+                    {% for link, name in nav3 %}
+                        <li>
+                            <a href="{{ link }}">{{name}}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>    
+    </header>
+    <body>
+            <ul>
+                <li>
+                    <div class="card">
+                        <h1>Are You Sure?</h1>
+                        <p class="title" >Klik Okay</p>
+                        <p class="title">Lanjut Chat Via Whatsapp</p>
+                        <p><button onclick="myFunction()"><a href="https://wa.me/6289618230359" target="_blank">Okay</a></button></p>
+                       
+                      </div>
+                </li>
+            </ul> 
+            <script>
+                function myFunction() {
+                  alert("Thank You!");
+                }
+                </script>
+    </body>
+</body>
+<footer>
+    <p>Project UAS Bahasa Pemrograman Kelompok </p>
+    <p>@copyright 2022</p>
+    <img src="{% static bgfooter %}" alt="">
+</footer>
+</html>
